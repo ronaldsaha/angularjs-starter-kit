@@ -1,4 +1,5 @@
-/* app css stylesheet */
+@import "../packages/bootstrap/dist/css/bootstrap.css";
+@import "../packages/bootstrap/dist/css/bootstrap-theme.css";
 
 .menu {
   list-style: none;
