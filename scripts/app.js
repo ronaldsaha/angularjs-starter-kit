@@ -3,6 +3,7 @@ define([
     './controllers/index',
     './directives/index',
     './filters/index',
+    './repositories/index',
     './services/index'
 ], function (angular) {
     'use strict';
@@ -13,19 +14,18 @@ define([
         'app.filters',
         'app.services',
         'ngRoute'
-    ])
-    //    run(function ($rootScope, $location) { //Insert in the function definition the dependencies you need.
-    //    //Do your $on in here, like this:
-    //    $rootScope.$on("$locationChangeStart",
-    //        function (event, current, previous, rejection) {
-    //            console.log($scope, $rootScope, $route, $location);
-    //        });
-    //    //$rootScope.$on("$locationChangeStart",function(event, next, current){
-    //    //    //Do your things
-    //    //    if(!$rootScope.isFormValid()){
-    //    //        //prevent location change.
-    //    //        event.preventDefault();
-    //    //    }
-    //    //});
-    //});
+    ]).run(function ($rootScope, $location) {
+        $rootScope.$on("$locationChangeStart",
+            function (event, current, previous, rejection) {
+                console.log($location.url());
+                console.log(event, current, previous, rejection);
+            });
+        //$rootScope.$on("$locationChangeStart",function(event, next, current){
+        //    //Do your things
+        //    if(!$rootScope.isFormValid()){
+        //        //prevent location change.
+        //        event.preventDefault();
+        //    }
+        //});
+    });
 });
