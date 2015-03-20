@@ -1,5 +1,5 @@
 define([
-    'angular','angular-route',
+    'angular', 'angular-route',
     './controllers/index',
     './directives/index',
     './filters/index',
@@ -8,15 +8,19 @@ define([
 ], function (angular) {
     'use strict';
 
-    return angular.module('app', [
+    var app = angular.module('app', [
         'app.controllers',
         'app.directives',
         'app.filters',
         'app.services',
+        'app.repositories',
         'ngRoute'
-    ]).run(function ($rootScope, $location) {
+    ]);
+
+    app.run(["$rootScope", "$location", "app.services.pageService", function ($rootScope, $location, pageService) {
         $rootScope.$on("$locationChangeStart",
             function (event, current, previous, rejection) {
+                var app = angular.module('app');
                 console.log($location.url());
                 console.log(event, current, previous, rejection);
             });
@@ -27,5 +31,7 @@ define([
         //        event.preventDefault();
         //    }
         //});
-    });
+    }]);
+
+    return app;
 });
