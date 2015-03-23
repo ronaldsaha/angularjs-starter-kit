@@ -4,7 +4,8 @@ define(['./module'], function (module) {
     module.controller('ContentController', ['$scope',
         function ($scope) {
 
-            this.initialize = function () {
+            this.initialize = function (contentId) {
+                console.log(contentId);
             };
 
 

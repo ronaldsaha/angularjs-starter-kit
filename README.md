@@ -45,3 +45,7 @@ while dependency management in RequireJS deals with the modules or, JavaScript f
 
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+[Angular Video Tutorials](https://egghead.io/)
+[Angular Tips](https://github.com/johnlindquist/AngularJSTopTenTips)
+[Angular Resolve](https://github.com/johnlindquist/angular-resolve)

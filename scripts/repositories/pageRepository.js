@@ -3,13 +3,13 @@ define(['./module'], function (module) {
 
     var pages = [
         {
-            key: '#/home',
-            layout: '<div id="header"></div><div id="body"></div><footer class="footer"><p>© Company 2014</p></footer>',
+            key: '/home',
+            layout: '<div class="container"><div id="header"></div><div id="body"></div><footer class="footer"><p>© Company 2014</p></footer></div>',
             widgets: [{key: 'header', value: '1'}, {key: 'body', value: '2'}]
         },
         {
-            key: '#/about',
-            layout: '<div id="header"></div><div id="body"></div><footer class="footer"><p>© Company 2014</p></footer>',
+            key: '/about',
+            layout: '<div class="container"><div id="header"></div><div id="body"></div><footer class="footer"><p>© Company 2014</p></footer></div>',
             widgets: [{key: 'header', value: '1'}, {key: 'body', value: '3'}]
         }
 
