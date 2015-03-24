@@ -9,7 +9,9 @@ define([
     'use strict';
 
     return angular
-        .module("app", ['app.controllers', 'app.directives', 'app.filters', 'app.services', 'app.repositories', 'ngRoute'])
+        .module('app', ['app.controllers', 'app.directives', 'app.filters', 'app.services', 'app.repositories', 'ngRoute'],
+        function () {
+        })
         .config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
             //$routeProvider.when("/", {});
             //$routeProvider.when("/:link", {

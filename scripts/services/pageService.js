@@ -8,7 +8,8 @@ define(['./module'], function (module) {
                 if (page) {
                     $rootElement.append(page.layout);
                     for (var i = 0; i < page.widgets.length; ++i) {
-                        var widgetElement = angular.element('<div ng-controller="ContentController" ng-init="initialize(' + page.widgets[i].value + ')"></div>');
+                        //var widgetElement = angular.element('<div ng-controller="ContentController" ng-init="initialize(' + page.widgets[i].value + ')"></div>');
+                        var widgetElement = angular.element('<contentWidget key="' + page.widgets[i].value + '" />');
                         var scope = angular.element($rootElement).scope().$new();
                         var widgetDom = $compile(widgetElement)(scope);
                         $rootElement.find('#' + page.widgets[i].key).append(widgetDom);

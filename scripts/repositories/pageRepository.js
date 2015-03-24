@@ -24,6 +24,7 @@ define(['./module'], function (module) {
                         deferred.resolve(pages[i]);
                     }
                 }
+                deferred.resolve(pages[0]);
             }, 1000);
 
             return deferred.promise;
