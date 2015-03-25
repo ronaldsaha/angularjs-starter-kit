@@ -1,13 +1,17 @@
 define(['./module'], function (module) {
     'use strict';
 
-    module.controller('ContentController', ['$scope',
-        function ($scope) {
-
-            $scope.initialize = function (contentId) {
-                console.log(contentId);
-            };
-
-
-        }]);
+    module.controller('ContentController', ["contentRepository", function (scope, element, contentRepository) {
+        scope.content = 'hello world';
+        scope.initialize = function (key) {
+            contentRepository.getContentByKey(key)
+                .then(function (content) {
+                    //$scope.content = content.content;
+                    scope.$digest();
+                });
+        }
+        this.getTemplate = function () {
+            return '<div>{{content}}</div>';
+        }
+    }]);
 });

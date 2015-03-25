@@ -16,7 +16,7 @@ define(['./module'], function (module) {
         }
     ];
 
-    module.service('ContentService', ["$q", "$http", function ($q, $http) {
+    module.service('contentRepository', ["$q", "$http", function ($q, $http) {
 
         this.getContentByKey = function (key) {
             var deferred = $q.defer();
