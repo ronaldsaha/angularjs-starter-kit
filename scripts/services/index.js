@@ -1,1 +1,4 @@
-define(['./pageService'], function () {});
+define([
+    './PageService'
+], function (module) {
+});

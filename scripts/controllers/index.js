@@ -1,3 +1,6 @@
-define(['./module','./contentController'], function (module) {
-    return module;
+define([
+    './Widgets/ContentWidgetController',
+    './MasterPageController',
+    './PageController'
+], function () {
 });

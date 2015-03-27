@@ -1,9 +1,10 @@
 require.config({
+    baseUrl: './Scripts/',
     paths: {
-        'angular': '../packages/angular/angular',
-        'angular-route': '../packages/angular-route/angular-route',
-        'domReady': '../packages/requirejs-domready/domReady',
-        'jQuery': '../packages/jquery/dist/jquery.min'
+        'angular': 'Packages/angular/angular',
+        'angular-route': 'Packages/angular-route/angular-route',
+        'domReady': 'Packages/requirejs-domready/domReady',
+        'jQuery': 'Packages/jquery/dist/jquery.min'
     },
     shim: {
         'angular': {

@@ -1,1 +1,1 @@
-define(['./pageRepository','./contentRepository'], function () {});
+define(['./contentRepository'], function () {});

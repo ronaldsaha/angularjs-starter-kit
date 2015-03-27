@@ -1,4 +1,4 @@
 {
-  "directory": "packages",
+  "directory": "scripts/Packages",
   "json": "bower.json"
 }
