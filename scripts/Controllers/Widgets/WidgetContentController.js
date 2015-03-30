@@ -9,7 +9,7 @@ define([
         function ($controller, uiService, $sce, contentService, scope, element, widget) {
             scope.content = '';
             this.render = function () {
-                element.append(uiService.createDom(Template, scope));
+                element.empty().append(uiService.createDom(Template, scope));
                 contentService.getContentByKey(widget.contentId)
                     .then(function (content) {
                         scope.content = $sce.trustAsHtml(content.content);

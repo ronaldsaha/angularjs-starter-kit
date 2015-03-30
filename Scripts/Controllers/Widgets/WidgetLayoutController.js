@@ -4,7 +4,7 @@ define(['../Module'], function (module) {
     return module.controller('WidgetLayoutController', ['$controller', 'scope', 'element', 'widget',
         function ($controller, scope, element, widget) {
             this.render = function () {
-                element.append(widget.layout);
+                element.empty().append(widget.layout);
                 for (var i = 0; i < widget.widgets.length; ++i) {
                     $controller('WidgetController', {
                         scope: scope.$new(),
