@@ -1,4 +1,7 @@
-define(['../Module'], function (module) {
+define([
+    '../Module',
+    'text!../Templates/Widgets/ContentWidgetTemplate.html'
+], function (module, Template) {
     'use strict';
 
     module.directive('ContentWidget', function () {
@@ -6,10 +9,10 @@ define(['../Module'], function (module) {
             restrict: 'E',
             replace: 'true',
             scope: {key: '@'},
-            template: '<div ng-bind-html="content"></div>',
-            controller: function ($scope, $element, $attrs, $transclude, $sce, contentRepository) {
+            template: Template,
+            controller: function ($scope, $element, $attrs, $transclude, $sce, ContentService) {
                 $scope.initialize = function () {
-                    contentRepository.getContentByKey($scope.key)
+                    ContentService.getContentByKey($scope.key)
                         .then(function (content) {
                             $scope.content = $sce.trustAsHtml(content.content);
                         });

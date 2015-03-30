@@ -4,6 +4,7 @@ require.config({
         'angular': 'Packages/angular/angular',
         'angular-route': 'Packages/angular-route/angular-route',
         'domReady': 'Packages/requirejs-domready/domReady',
+        'text': 'Packages/requirejs-text/text',
         'jQuery': 'Packages/jquery/dist/jquery.min'
     },
     shim: {
@@ -13,7 +14,7 @@ require.config({
         'angular-route': {
             deps: ['angular']
         },
-        'jQuery':{
+        'jQuery': {
             exports: 'jQuery'
         }
     },

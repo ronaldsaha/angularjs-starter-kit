@@ -10,7 +10,8 @@
     "angular": "latest",
     "angular-route": "latest",
     "requirejs": "latest",
-    "requirejs-domready": "latest",
+    "requirejs-domready": "2.0.1",
+    "requirejs-text": "2.0.14",
     "jquery": "latest",
     "bootstrap": "latest"
   }

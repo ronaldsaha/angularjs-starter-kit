@@ -1,4 +1,6 @@
 define([
-    './PageService'
-], function (module) {
+    './ContentService',
+    './PageService',
+    './UIService'
+], function () {
 });

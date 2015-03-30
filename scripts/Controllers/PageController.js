@@ -1,18 +1,18 @@
 define(['./Module'], function (module) {
     'use strict';
 
-    module.controller('PageController', ["PageService", function (pageService) {
-        console.log('hello world')
-        //scope.content = 'hello world';
-        //scope.initialize = function (key) {
-        //    contentRepository.getContentByKey(key)
-        //        .then(function (content) {
-        //            //$scope.content = content.content;
-        //            scope.$digest();
-        //        });
-        //}
-        //this.getTemplate = function () {
-        //    return '<div>{{content}}</div>';
-        //}
+    module.controller('PageController', ['$controller', 'scope', 'element', 'page', function ($controller, scope, element, page) {
+        this.render = function () {
+            for (var i = 0; i < page.widgets.length; ++i) {
+                $controller('WidgetController', {
+                    scope: scope.$new(),
+                    element: element,
+                    widgetInfo: page.widgets[i]
+                }).render();
+            }
+        }
+        this.getScope = function () {
+            return scope;
+        }
     }]);
 });

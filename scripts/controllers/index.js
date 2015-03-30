@@ -1,6 +1,5 @@
 define([
-    './Widgets/ContentWidgetController',
-    './MasterPageController',
+    './Widgets/WidgetController',
     './PageController'
 ], function () {
 });

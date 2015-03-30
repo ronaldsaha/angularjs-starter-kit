@@ -1,4 +1,4 @@
 define([
-    './Module'
-], function (module) {
+    './ApplicationContext'
+], function () {
 });
