@@ -1,5 +1,5 @@
-@import "../Scripts/Packages/bootstrap/dist/css/bootstrap.css";
-@import "../Scripts/Packages/bootstrap/dist/css/bootstrap-theme.css";
+@import "../scripts/Packages/bootstrap/dist/css/bootstrap.css";
+@import "../scripts/Packages/bootstrap/dist/css/bootstrap-theme.css";
 
 .menu {
   list-style: none;

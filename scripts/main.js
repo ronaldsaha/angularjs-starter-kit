@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: './Scripts/',
+    baseUrl: './scripts/',
     paths: {
         'angular': 'Packages/angular/angular',
         'angular-route': 'Packages/angular-route/angular-route',
