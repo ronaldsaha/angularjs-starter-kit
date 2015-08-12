@@ -46,12 +46,15 @@ define(['./Module'], function (module) {
             this.getPageByRoute = function (route) {
                 var deferred = $q.defer();
                 setTimeout(function () {
+                    var found = false;
                     for (var i = 0; i < pages.length; ++i) {
                         if (pages[i].key == route) {
+                            found = true;
                             deferred.resolve(pages[i]);
                         }
                     }
-                    deferred.resolve(pages[0]);
+                    if(!found)
+                        deferred.resolve(pages[0]);
                 }, 1000);
 
                 return deferred.promise;

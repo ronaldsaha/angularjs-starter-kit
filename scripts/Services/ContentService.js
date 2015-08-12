@@ -4,7 +4,7 @@ define(['./Module'], function (module) {
     var contents = [
         {
             key: '1',
-            content: '<div class="header clearfix"><nav> <ul class="nav nav-pills pull-right"> <li role="presentation"><a href="#/home">Home</a></li> <li role="presentation"><a href="#/About">About</a></li> </ul> </nav> <h3 class="text-muted">Project name</h3></div>'
+            content: '<div class="header clearfix"><nav> <ul class="nav nav-pills pull-right"> <li role="presentation"><a href="#/home">Home</a></li> <li role="presentation"><a href="#/about">About</a></li> </ul> </nav> <h3 class="text-muted">Project name</h3></div>'
         },
         {
             key: '2',
