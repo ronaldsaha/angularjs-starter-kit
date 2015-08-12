@@ -58,3 +58,22 @@ define(['./Module'], function (module) {
             }
         }]);
 });
+
+//var deferred = $q.defer();
+//var promise = deferred.promise;
+//promise.success = function (onSuccess) {
+//    promise.onSuccess = onSuccess;
+//    return promise;
+//}
+//promise.failed = function (onFailed) {
+//    promise.onFailed = onFailed;
+//    return promise;
+//}
+//
+//$http.get('api/widgets/form/' + listId + '/' + formId).then(function (response) {
+//    deferred.resolve(response.data);
+//})
+//promise.then(function (data) {
+//    promise.onSuccess(data.form, data.defaultFormContent);
+//})
+//return promise;
